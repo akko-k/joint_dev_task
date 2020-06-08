@@ -65,7 +65,11 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
+  programming_languages = programming_languages.map{
+    |item| item.capitalize}
 
+  upper_case_programming_languages = programming_languages.map{
+    |item| item.upcase}
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
@@ -75,7 +79,8 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  names.each.with_index do |name,i|
+    puts "会員No.#{i} #{name}さん"
 end
 
 def q10
