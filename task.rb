@@ -121,6 +121,7 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
+  p data.keys
 
 end
 
@@ -129,8 +130,12 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
+ puts data1.has_key?(:age)? "OK" : "NG"
+ puts data2.has_key?(:age)? "OK" : "NG"
+  
+ end
 
-end
+
 
 def q16
   users = [
@@ -141,7 +146,7 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  
 end
 
 class UserQ17
