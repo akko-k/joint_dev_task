@@ -153,16 +153,18 @@ end
 
 class UserQ17
   attr_reader :name, :age, :gender
-  def initialize(name:,age:,gender:)
-    @name = name
-    @age = age
-    @gender = gender
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
   end
 
   def info
-    puts "名前:#{name}"
-    puts "年齢:#{age}"
-    puts "性別:#{gender}"
+    puts <<~EOS
+      名前：#{name}
+      年齢：#{age}
+      性別：#{gender}
+    EOS
   end
 end
 
